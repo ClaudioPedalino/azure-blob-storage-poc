@@ -5,7 +5,7 @@
   <SonarBinDir>D:\_Repos\azure-cositas\azure-blob-storage.api\.sonarqube\bin</SonarBinDir>
   <SonarScannerWorkingDirectory>D:\_Repos\azure-cositas\azure-blob-storage.api</SonarScannerWorkingDirectory>
   <HasBeginStepCommandLineCredentials>true</HasBeginStepCommandLineCredentials>
-  <SonarQubeHostUrl>http://20.197.201.205:9000</SonarQubeHostUrl>
+  <SonarQubeHostUrl>http://ip172-18-0-36-bvsld81lo55000bfpepg-9000.direct.labs.play-with-docker.com</SonarQubeHostUrl>
   <SonarQubeVersion>8.6.0.39681</SonarQubeVersion>
   <SonarProjectKey>azure-blob-storage</SonarProjectKey>
   <AdditionalConfig>
@@ -99,11 +99,11 @@
     <Property Name="sonar.auth.gitlab.url">https://gitlab.com</Property>
     <Property Name="sonaranalyzer-vbnet.pluginKey">vbnet</Property>
     <Property Name="sonar.updatecenter.url">https://update.sonarsource.org/update-center.properties</Property>
-    <Property Name="sonar.core.startTime">1/9/2021 3:42:53 AM</Property>
-    <Property Name="sonar.core.id">BF41A1F2-AXbl4lk9bBILplI541ED</Property>
+    <Property Name="sonar.core.startTime">1/9/2021 4:11:48 AM</Property>
+    <Property Name="sonar.core.id">BF41A1F2-AXbl_LfMC1LPpivtLI8n</Property>
   </ServerSettings>
   <LocalSettings>
-    <Property Name="sonar.host.url">http://20.197.201.205:9000</Property>
+    <Property Name="sonar.host.url">http://ip172-18-0-36-bvsld81lo55000bfpepg-9000.direct.labs.play-with-docker.com</Property>
   </LocalSettings>
   <AnalyzersSettings>
     <AnalyzerSettings>

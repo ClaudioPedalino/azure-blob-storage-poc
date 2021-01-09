@@ -31,16 +31,16 @@ namespace azure_blob_storage.api.Services
             await foreach (var blobItem in containerClient.GetBlobsAsync())
             {
                 items.Add(blobItem.Name);
-            };
+            }
             return items;
         }
 
-        public async Task<BlobInfo> GetBlobAsync(string name)
+        public async Task<BlobInfo> GetBlobAsync(string blobName)
         {
-            var blob = _configuration.GetValue<string>("BobStorage:BlobName");
+            var blob = _configuration.GetValue<string>("BobStorage:BlobContainerName");
             var containerClient = _blobServiceClient.GetBlobContainerClient(blob);
 
-            var blobClient = containerClient.GetBlobClient(name);
+            var blobClient = containerClient.GetBlobClient(blobName);
             var blobDownloadInfo = await blobClient.DownloadAsync();
             return new BlobInfo()
             {
@@ -51,7 +51,7 @@ namespace azure_blob_storage.api.Services
 
         public async Task UploadFileBlobAsync(string filePatch, string fileName)
         {
-            var blob = _configuration.GetValue<string>("BobStorage:BlobName");
+            var blob = _configuration.GetValue<string>("BobStorage:BlobContainerName");
             var containerClient = _blobServiceClient.GetBlobContainerClient(blob);
             var blobClient = containerClient.GetBlobClient(fileName);
             await blobClient.UploadAsync(filePatch, new BlobHttpHeaders { ContentType = filePatch.GetContentType() });
@@ -59,7 +59,7 @@ namespace azure_blob_storage.api.Services
 
         public async Task UploadContentBlobAsync(string content, string fileName)
         {
-            var blob = _configuration.GetValue<string>("BobStorage:BlobName");
+            var blob = _configuration.GetValue<string>("BobStorage:BlobContainerName");
             var containerClient = _blobServiceClient.GetBlobContainerClient(blob);
             var blobClient = containerClient.GetBlobClient(fileName);
             var bytes = Encoding.UTF8.GetBytes(content);
@@ -69,7 +69,7 @@ namespace azure_blob_storage.api.Services
 
         public async Task DeleteBlobAsync(string blobName)
         {
-            var blob = _configuration.GetValue<string>("BobStorage:BlobName");
+            var blob = _configuration.GetValue<string>("BobStorage:BlobContainerName");
             var containerClient = _blobServiceClient.GetBlobContainerClient(blob);
             var blobClient = containerClient.GetBlobClient(blobName);
 
