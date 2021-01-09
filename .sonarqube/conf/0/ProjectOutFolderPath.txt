@@ -1,1 +1,0 @@
-D:\_Repos\azure-cositas\azure-blob-storage.api\.sonarqube\out\0
