@@ -19,5 +19,9 @@ jobs:
         dotnet-version: 5.0.100-preview.2.20176.6
     - name: Restore dependencies
       run: dotnet restore
+    - name: sonar begin
+      run: dotnet sonarscanner begin /k:"azure-blob-storage" /d:sonar.host.url="http://ip172-18-0-84-bvt3b7434gag00fibocg-9000.direct.labs.play-with-docker.com" /d:sonar.login="ce9fdf5ea6b7ed097664048a7dafaa2ed9c2d3cb"
     - name: Build
       run: dotnet build --no-restore
+    - name: sonar end
+      run: dotnet sonarscanner end /d:sonar.login="ce9fdf5ea6b7ed097664048a7dafaa2ed9c2d3cb"
