@@ -24,5 +24,5 @@ jobs:
     - name: SonarQube Scan
       uses: kitabisa/sonarqube-action@master
       with:
-        host: ${{ secrets.SONARQUBE_HOST }}
-        login: ${{ secrets.SONARQUBE_TOKEN }}
+        host: http://ip172-18-0-84-bvt3b7434gag00fibocg-9000.direct.labs.play-with-docker.com
+        login: ce9fdf5ea6b7ed097664048a7dafaa2ed9c2d3cb
