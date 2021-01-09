@@ -1,4 +1,4 @@
-﻿namespace azure_blob_storage.api.Queries
+﻿namespace azure_blob_storage.api.Dtos
 {
     public class UploadFileRequest
     {

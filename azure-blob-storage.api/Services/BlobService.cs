@@ -42,11 +42,7 @@ namespace azure_blob_storage.api.Services
 
             var blobClient = containerClient.GetBlobClient(blobName);
             var blobDownloadInfo = await blobClient.DownloadAsync();
-            return new BlobInfo()
-            {
-                Content = blobDownloadInfo.Value.Content,
-                ContentType = blobDownloadInfo.Value.ContentType
-            };
+            return BlobInfo.CreateInstance(blobDownloadInfo.Value.Content, blobDownloadInfo.Value.ContentType);
         }
 
         public async Task UploadFileBlobAsync(string filePatch, string fileName)
