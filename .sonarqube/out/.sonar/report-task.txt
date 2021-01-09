@@ -1,0 +1,6 @@
+projectKey=azure-blob-storage
+serverUrl=http://20.197.201.205:9000
+serverVersion=8.6.0.39681
+dashboardUrl=http://20.197.201.205:9000/dashboard?id=azure-blob-storage
+ceTaskId=AXbl6JHbbBILplI54562
+ceTaskUrl=http://20.197.201.205:9000/api/ce/task?id=AXbl6JHbbBILplI54562
