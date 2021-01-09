@@ -16,11 +16,11 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.100-preview.2.20176.6
+        dotnet-version: 5.0.0-rc.2.20475.5
     - name: Restore dependencies
       run: dotnet restore
     - name: install sonarscanner
-      run: dotnet tool install --global dotnet-sonarscanner --version 5.0.4
+      run: dotnet tool install --global dotnet-sonarscanner
     - name: sonar begin
       run: dotnet-sonarscanner begin /k:"azure-blob-storage" /d:sonar.host.url="http://ip172-18-0-84-bvt3b7434gag00fibocg-9000.direct.labs.play-with-docker.com" /d:sonar.login="ce9fdf5ea6b7ed097664048a7dafaa2ed9c2d3cb"
     - name: Build
